@@ -1,19 +1,15 @@
-from math import factorial
+from math import floor
 
 
 def zeros(n):
     c = 0
-    f = factorial(n)
-    is_zero = True
-    while is_zero:
-        is_zero = f % 10 == 0
-        f //= 10
-        c += 1
-    return c-1
+    while (n != 0):
+        c += int(floor(n / 5))
+        n /= 5
+    return c
 
 
 if __name__ == "__main__":
     assert zeros(0) == 0
     assert zeros(6) == 1
     assert zeros(30) == 7
-
