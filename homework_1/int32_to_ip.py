@@ -1,6 +1,6 @@
 def int32_to_ip(int32):
     ip_adress = []
-    for i in range(4):
+    for _ in range(4):
         ip_adress.append(str(int32 % 256))
         int32 //= 256
     return ".".join(ip_adress[::-1])
